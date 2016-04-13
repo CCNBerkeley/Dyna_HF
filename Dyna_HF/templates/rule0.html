@@ -1,0 +1,38 @@
+<div id="container-exp">
+	<h1>Trial Rules</h1>
+	<body>
+	<div class = 'instruction-exp'>
+		<p> When shown the shape on the left, press the indicated keyboard button.
+		</p>
+	</div>
+	<div style="border:1px solid black;">
+	<!-- We use float left to make sure both are on the left side, and wrap them in a div to make sure nothing touches the text. -->
+	<img id = "response1" src="static/images/A1.png" style="width:400px; height:186px; float: right;
+	position: fixed; left: 50%" />
+
+	<img id = "response2" src="static/images/A2.png" style="width:400px; height:186px; float: right;
+	position: fixed; top: 400px; left: 50%" />
+	<!-- Spot for the 2 training images. Make them float left and align them horizontally with the button-press images.-->
+	<img id = "shape1" src="static/images/" style="width:250px; height:250px; float: left;
+	position: fixed;" />
+
+	<img id = "shape2" src="static/images/" style="width:250px; height:250px; float: left;
+	position: fixed; top: 400px;" />
+	</div>
+	</body>
+	<div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            	<!-- no previous button on first screen -->
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+                Continue<span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

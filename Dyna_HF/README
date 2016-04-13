@@ -1,0 +1,9 @@
+ANNE COLLINS: DYNA_HF PROJECT
+
+This project is designed to test if learning abstractions help with multi-layered decision making. Overall, the experiment tests for learning capability of new rules after old rules have been overlearned, or flattened.
+
+3 dimensional shapes are used to provide several different rules for the participant to learn: shape, color, and texture. See the included powerpoint for more experiment details.
+
+====================================
+
+The html files in the template detail each seperate page that participants will interact with. Logic and control flow can be found in the .js files in the static directory. For ease of reading, the experiment .js code is divided by sections (exp.js and questionnaire.js). The actual start and loading of the experiment can be found in main.js
