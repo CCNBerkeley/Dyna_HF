@@ -14,10 +14,10 @@
 	position: fixed; top: 400px; left: 50%" />
 	<!-- Spot for the 2 training images. Make them float left and align them horizontally with the button-press images.-->
 	<img id = "shape1" src="static/images/" style="width:250px; height:250px; float: left;
-	position: fixed;" />
+	position: fixed; left: 22%" />
 
 	<img id = "shape2" src="static/images/" style="width:250px; height:250px; float: left;
-	position: fixed; top: 400px;" />
+	position: fixed; top: 400px; left: 22%" />
 
 	<img id = "response3" src="static/images/A3.png" style="width:400px; height:186px; float: right;
 	position: fixed; top: 800 px; left: 50%" />
@@ -26,12 +26,22 @@
 	position: fixed; top: 1200px; left: 50%" />
 	<!-- Spot for the 2 training images. Make them float left and align them horizontally with the button-press images.-->
 	<img id = "shape3" src="static/images/" style="width:250px; height:250px; float: left;
-	position: fixed; top: 800px;" />
+	position: fixed; top: 800px; left: 22%" />
 
 	<img id = "shape4" src="static/images/" style="width:250px; height:250px; float: left;
-	position: fixed; top: 1200px;" />
+	position: fixed; top: 1200px; left: 22%" />
 	</div>
 	</body>
+	<script type="text/javascript">
+		var shape1_r2 = document.getElementById('shape1');
+		var shape2_r2 = document.getElementById('shape2');
+		var shape3_r2 = document.getElementById('shape3');
+		var shape4_r2 = document.getElementById('shape4');
+		shape1_r2.src = '/static/images/' + Stim1.stim_img + '.png';
+		shape2_r2.src = '/static/images/' + Stim2.stim_img + '.png';
+		shape3_r2.src = '/static/images/' + Stim3.stim_img + '.png';
+		shape4_r2.src = '/static/images/' + Stim4.stim_img + '.png';
+	</script>
 	<div class="instructionsnav">
         <div class="row">
             <div class="col-xs-2">

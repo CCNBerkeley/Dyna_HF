@@ -15,6 +15,7 @@ function shuffleArray(array) {
 
 //Stimulus object
 function Stimulus(stimName, texture, color, shape, key_response, generalize) {
+    //Generalizable way to refer to this stimulus; used because the TCS variables change with every trial
     this.stimName = stimName;
 
 	//Image file name, as used in the images directory
@@ -23,6 +24,7 @@ function Stimulus(stimName, texture, color, shape, key_response, generalize) {
 	//Correct action to take for this stimulus
 	this.key_response = key_response;
 
+    //If this stimulus is one of the "to learn" stimuli, is it the first or second learning rule?
     this.generalize = generalize
 }
 
@@ -35,6 +37,7 @@ var A2 = "G";
 var A3 = "H";
 var A4 = "J";
 
+//Shuffle to map randomized TCS variables to each stimulus
 texture_array = shuffleArray(texture_array);
 color_array = shuffleArray(color_array);
 shape_array = shuffleArray(shape_array);
@@ -58,3 +61,5 @@ var Stim16 = new Stimulus("Stim16", texture_array[0], color_array[4], shape_arra
 var Stim17 = new Stimulus("Stim17", texture_array[3], color_array[1], shape_array[0], A3, 2);
 var Stim18 = new Stimulus("Stim18", texture_array[3], color_array[0], shape_array[1], A2, 0);
 var Stim19 = new Stimulus("Stim19", texture_array[3], color_array[0], shape_array[0], A1, 0);
+
+

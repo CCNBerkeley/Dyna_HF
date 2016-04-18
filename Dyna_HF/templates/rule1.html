@@ -8,18 +8,24 @@
 	<div style="border:1px solid black;">
 	<!-- We use float left to make sure both are on the left side, and wrap them in a div to make sure nothing touches the text. -->
 	<img id = "response1" src="static/images/A3.png" style="width:400px; height:186px; float: right;
-	position: fixed; left: 50%" />
+	position: fixed; top: 230px; left: 50%" />
 
 	<img id = "response2" src="static/images/A4.png" style="width:400px; height:186px; float: right;
-	position: fixed; top: 400px; left: 50%" />
+	position: fixed; top: 500px; left: 50%" />
 	<!-- Spot for the 2 training images. Make them float left and align them horizontally with the button-press images.-->
 	<img id = "shape1" src="static/images/" style="width:250px; height:250px; float: left;
-	position: fixed;" />
+	position: fixed; left: 22%" />
 
 	<img id = "shape2" src="static/images/" style="width:250px; height:250px; float: left;
-	position: fixed; top: 400px;" />
+	position: fixed; top: 400px; left: 22%" />
 	</div>
 	</body>
+	<script type="text/javascript">
+		var shape1_r1 = document.getElementById('shape1');
+		var shape2_r1 = document.getElementById('shape2');
+		shape1_r1.src = '/static/images/' + Stim3.stim_img + '.png';
+		shape2_r1.src = '/static/images/' + Stim4.stim_img + '.png';
+	</script>
 	<div class="instructionsnav">
         <div class="row">
             <div class="col-xs-2">

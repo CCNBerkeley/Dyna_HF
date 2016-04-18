@@ -12494,3 +12494,75 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
     super(Connection, self).__init__(*args, **kwargs2)
 OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (111)")
+2016-04-13 10:32:46,612 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:32:46,679 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:32:46,683 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:32:46,836 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:32:46,851 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:32:46,935 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:32:46,978 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:32:47,034 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:32:47,058 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:51:57,559 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:51:57,647 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:51:57,826 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:51:57,866 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:51:57,962 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:51:57,976 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:51:58,035 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:51:58,155 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 10:51:58,190 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+[2016-04-13 11:20:40 +0000] [4493] [CRITICAL] WORKER TIMEOUT (pid:4498)
+[2016-04-13 11:20:40 +0000] [4493] [CRITICAL] WORKER TIMEOUT (pid:4499)
+[2016-04-13 11:20:40 +0000] [4493] [CRITICAL] WORKER TIMEOUT (pid:4500)
+[2016-04-13 11:20:40 +0000] [4493] [CRITICAL] WORKER TIMEOUT (pid:4501)
+[2016-04-13 11:20:40 +0000] [4493] [CRITICAL] WORKER TIMEOUT (pid:4502)
+[2016-04-13 11:20:40 +0000] [4493] [CRITICAL] WORKER TIMEOUT (pid:4503)
+[2016-04-13 11:20:40 +0000] [4493] [CRITICAL] WORKER TIMEOUT (pid:4504)
+[2016-04-13 11:20:40 +0000] [4493] [CRITICAL] WORKER TIMEOUT (pid:4505)
+[2016-04-13 11:20:40 +0000] [4493] [CRITICAL] WORKER TIMEOUT (pid:4506)
+2016-04-13 11:20:42,939 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 11:20:43,443 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 11:20:43,599 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 11:20:43,673 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 11:20:43,722 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 11:20:43,784 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 11:20:43,787 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 11:20:43,793 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-13 11:20:43,879 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-17 19:04:39,137 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-17 19:04:39,146 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-17 19:04:39,182 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-17 19:04:39,229 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-17 19:04:39,230 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-17 19:04:39,272 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-17 19:04:39,322 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-17 19:04:39,346 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-17 19:04:39,355 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 10:42:14,248 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 10:42:14,247 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 10:42:14,248 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 10:42:14,249 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 10:42:14,261 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 10:42:14,274 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 10:42:14,333 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 10:42:14,348 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 10:42:14,375 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+[2016-04-18 16:02:48 +0000] [6523] [CRITICAL] WORKER TIMEOUT (pid:6528)
+[2016-04-18 16:02:48 +0000] [6523] [CRITICAL] WORKER TIMEOUT (pid:6529)
+[2016-04-18 16:02:48 +0000] [6523] [CRITICAL] WORKER TIMEOUT (pid:6530)
+[2016-04-18 16:02:48 +0000] [6523] [CRITICAL] WORKER TIMEOUT (pid:6531)
+[2016-04-18 16:02:48 +0000] [6523] [CRITICAL] WORKER TIMEOUT (pid:6532)
+[2016-04-18 16:02:48 +0000] [6523] [CRITICAL] WORKER TIMEOUT (pid:6533)
+[2016-04-18 16:02:48 +0000] [6523] [CRITICAL] WORKER TIMEOUT (pid:6534)
+[2016-04-18 16:02:48 +0000] [6523] [CRITICAL] WORKER TIMEOUT (pid:6535)
+[2016-04-18 16:02:48 +0000] [6523] [CRITICAL] WORKER TIMEOUT (pid:6536)
+2016-04-18 16:02:50,476 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 16:02:51,116 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 16:02:51,350 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 16:02:51,405 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 16:02:51,497 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 16:02:51,515 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 16:02:51,617 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 16:02:51,694 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-18 16:02:51,715 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js

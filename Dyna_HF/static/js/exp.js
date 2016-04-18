@@ -28,6 +28,8 @@ function experiment () {
 	//Boolean for to turn on keystroke-dependent events
 	var listening = false;
 
+	var too_late_timer;
+
 	//Timing related variables
 	var fixation_time = 500;
     var feedback_delay_time = 200;
@@ -40,9 +42,9 @@ function experiment () {
 		var presentation = stim[0].stim_img;
 		var source = '/static/images/' + presentation + '.png';
 		img.src = source;
-		alert("here1");
 		img.style.display = 'inline';
 		listening = true;
+		too_late_timer = setTimeout(tooLate, timing_max_response_time);
 	};
 
 	/* This records data and continues the experiment. */
@@ -79,10 +81,12 @@ function experiment () {
 				counter = counter&0xFFFFFFF3;
 			}
 		};
-		var reset_timer = setTimeout(function(){psiTurk.showPage('stage.html'); newTrial();}, feedback_display_time);
+		setTimeout(function(){psiTurk.showPage('stage.html'); newTrial();}, 
+			feedback_display_time);
 		if ((show_feedback == 1) && (response.length > 0)) {
-			var feedback = (response_correct? 'correct' : 'incorrect');
-			var correct_timer = setTimeout(function(){feedbackPage(feedback);}, feedback_delay_time);
+			var feedback = (response_correct? '<h1>correct</h1>' : '<h1>incorrect</h1>');
+			//var correct_timer = setTimeout(function(){feedbackPage(feedback);}, feedback_delay_time);
+			feedbackPage(feedback);
 		}
 	}
 
@@ -92,26 +96,19 @@ function experiment () {
 	function tooLate() {
 		listening = false;
 		var response = "";
-		var late_feedback_timer = setTimeout(feedbackPage("Not a valid response"), feedback_delay_time);
+		//var late_feedback_timer = setTimeout(psiTurk.showPage('noResponse.html'), feedback_delay_time);
+		psiTurk.showPage('noResponse.html');
 		var continuation_timer = setTimeout(function(){
 			recordAndContinue(response);
-		},2000)
+		},feedback_display_time)
 	};
 
 	/* Displays reponse correctness if feedback is on for a certain trial.
 	*/
 	function feedbackPage(message) {
 		psiTurk.showPage('feedback.html');
-		var messageText = "<h1>" + message + "</h1>";
 		elem = document.getElementById('message');
 		elem.innerHTML = message;
-		if (message == "Not a valid response"){
-			alert("here2");
-			elem.style.left = "30%";
-		} else {
-			alert("here3");
-			elem.style.left = "42%";
-		}
 	}
 
 	/* Increments trial number, and does other phase transition-related
@@ -119,8 +116,9 @@ function experiment () {
 	*/
 	function phaseUpdate() {
 		phase_index += 1;
+
 		//REQCHANGE BEFORE ACTUAL EXPERIMENT RELEASE
-		trial_num = 2;
+		trial_num = 4;
 		if (phase_index >= 11) {
 			end();
 		} else {
@@ -129,9 +127,11 @@ function experiment () {
 			if (phase_index < 3) {
 				var instPage = "rule" + phase_index.toString() + ".html";
 				psiTurk.doInstructions(
-	        		["rule1.html"],
+	        		[instPage],
 	        		function() {psiTurk.showPage('stage.html'); newTrial()} 
     			);
+			} else {
+				newTrial();
 			}
 		}
 	};
@@ -177,16 +177,14 @@ function experiment () {
 	function newTrial() {
 		if (trial_num == 0 || counter == 15) {
 			phaseUpdate();
-			newTrial();
+			//newTrial();
 		} else if (trial_num >= 11) {
 			return;
 		} else {
 			trial_num -= 1;
 			img = document.getElementById("image0");
-			alert("here4");
 			img.style.display = 'none';
 			var stim_timer = setTimeout(displayStim, fixation_time);
-			var too_late_timer = setTimeout(tooLate, timing_max_response_time);
 		}
 	};
 
@@ -195,7 +193,8 @@ function experiment () {
 
 	// Register the response handler that is defined above to handle any
 	// key down events.
-	$("body").focus().keydown(response_handler); 
+	//$("body").focus().keydown(response_handler); 
+	document.addEventListener("keydown", response_handler);
 
 	/* Start trials. */
 	newTrial();
@@ -214,7 +213,7 @@ var stim_images  = ['/static/images/S1C1T1.png' ,'/static/images/S1C1T1.png'];
 var instr_images = ['/static/images/inst.png'];
 
 // All pages to be loaded after Ad page which, accepted, splashes to consent page. 
-var pages = ["instruct.html", "stage.html", "questionnaire.html", "feedback.html","rule1.html"];
+var pages = ["instruct.html", "stage.html", "questionnaire.html", "feedback.html", "rule0.html", "rule1.html", "rule2.html", "noResponse.html"];
 
 psiTurk.preloadPages(pages);
 var instructionPages = ["instruct.html"];
