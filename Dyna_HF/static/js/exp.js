@@ -118,7 +118,7 @@ function experiment () {
 		phase_index += 1;
 
 		//REQCHANGE BEFORE ACTUAL EXPERIMENT RELEASE
-		trial_num = 4;
+		trial_num = 2;
 		if (phase_index >= 11) {
 			end();
 		} else {
@@ -128,6 +128,11 @@ function experiment () {
 				var instPage = "rule" + phase_index.toString() + ".html";
 				psiTurk.doInstructions(
 	        		[instPage],
+	        		function() {psiTurk.showPage('stage.html'); newTrial()} 
+    			);
+			} else if (phase_index == 4) {
+				psiTurk.doInstructions(
+	        		["instructTest.html"],
 	        		function() {psiTurk.showPage('stage.html'); newTrial()} 
     			);
 			} else {
@@ -213,7 +218,8 @@ var stim_images  = ['/static/images/S1C1T1.png' ,'/static/images/S1C1T1.png'];
 var instr_images = ['/static/images/inst.png'];
 
 // All pages to be loaded after Ad page which, accepted, splashes to consent page. 
-var pages = ["instruct.html", "stage.html", "questionnaire.html", "feedback.html", "rule0.html", "rule1.html", "rule2.html", "noResponse.html"];
+var pages = ["instruct.html", "stage.html", "questionnaire.html", "feedback.html", "rule0.html", 
+	"rule1.html", "rule2.html", "noResponse.html", "instructTest.html"];
 
 psiTurk.preloadPages(pages);
 var instructionPages = ["instruct.html"];

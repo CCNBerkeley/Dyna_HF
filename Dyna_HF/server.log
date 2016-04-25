@@ -12566,3 +12566,12 @@ OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to 
 2016-04-18 16:02:51,617 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
 2016-04-18 16:02:51,694 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
 2016-04-18 16:02:51,715 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-25 08:42:19,658 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-25 08:42:19,659 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-25 08:42:19,659 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-25 08:42:19,660 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-25 08:42:19,672 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-25 08:42:19,757 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-25 08:42:19,773 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-25 08:42:19,780 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-04-25 08:42:19,949 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js

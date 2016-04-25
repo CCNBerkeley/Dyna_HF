@@ -45,10 +45,10 @@ def lst_print(lst):
 		print("[%s,%d], " % (trial[0], trial[1]), end="")
 	print("\n")
 
-def practice_builder(x):
-	stim = [[x, 1]]
+def practice_builder(x, y):
+	stim = [[x, 1], [y, 1]]
 	lst = []
-	for i in range(0, 20):
+	for i in range(0, 10):
 		lst = deepcopy(lst) + deepcopy(stim)
 	for trial in lst:
 		prob = random.randint(0,3)
@@ -79,11 +79,11 @@ def test_builder(stims):
 
 #PRACTICE RULE 1
 print("Practice rule 1:\n")
-lst_print(practice_builder("Stim1"))
+lst_print(practice_builder("Stim1", "Stim2"))
 
 #PRACTICE RULE 2
 print("Practice rule 2:\n")
-lst_print(practice_builder("Stim2"))
+lst_print(practice_builder("Stim3", "Stim4"))
 
 #LEARNING PHASE
 print("Learning phase:\n")
