@@ -118,7 +118,7 @@ function experiment () {
 		phase_index += 1;
 
 		//REQCHANGE BEFORE ACTUAL EXPERIMENT RELEASE
-		trial_num = 4;
+		trial_num = phase_types[phase_index].trials;
 		if (phase_index >= 11) {
 			end();
 		} else {
@@ -185,7 +185,7 @@ function experiment () {
 		if (trial_num == 0 || counter == 15) {
 			phaseUpdate();
 			//newTrial();
-		} else if (trial_num >= 11) {
+		} else if (phase_index >= 11) {
 			return;
 		} else {
 			trial_num -= 1;
