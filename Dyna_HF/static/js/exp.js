@@ -118,7 +118,7 @@ function experiment () {
 		phase_index += 1;
 
 		//REQCHANGE BEFORE ACTUAL EXPERIMENT RELEASE
-		trial_num = 2;
+		trial_num = 4;
 		if (phase_index >= 11) {
 			end();
 		} else {
@@ -130,7 +130,7 @@ function experiment () {
 	        		[instPage],
 	        		function() {psiTurk.showPage('stage.html'); newTrial()} 
     			);
-			} else if (phase_index == 4) {
+			} else if (phase_index == 3) {
 				psiTurk.doInstructions(
 	        		["instructTest.html"],
 	        		function() {psiTurk.showPage('stage.html'); newTrial()} 
@@ -174,6 +174,8 @@ function experiment () {
 		if (response.length > 0) {
 			listening = false;
 			clearTimeout(too_late_timer);
+			img = document.getElementById("image0");
+			img.style.display = 'none';
 			recordAndContinue(response);
 		}
 	};

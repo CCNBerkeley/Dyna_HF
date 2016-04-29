@@ -1,6 +1,9 @@
 /** This file contains the structure for each Phase. Phases randomly choose from an array
     of scrambled trial orders, as defined in stimInfo. This is to allow extra layers of
     randomness into the experiment.
+
+    
+    Check Test0 location. Make feedback for non-feedback
 */
 //Phase object
 function Phase(phaseName, trials, stim_types, instruction, special_instruction) {

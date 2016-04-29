@@ -16,8 +16,8 @@ database_url = mysql://ching:CalBears@127.0.0.1:3306/participants
 table_name = myData
 
 [Server Parameters]
-host = 127.0.0.1
-2port = 22362
+host = localhost
+port = 22362
 cutoff_time = 30
 logfile = server.log
 loglevel = 2
