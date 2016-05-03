@@ -50,6 +50,7 @@ def practice_builder(x, y):
 	lst = []
 	for i in range(0, 10):
 		lst = deepcopy(lst) + deepcopy(stim)
+	random.shuffle(lst)
 	for trial in lst:
 		prob = random.randint(0,3)
 		if prob == 0:
