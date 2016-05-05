@@ -80,44 +80,44 @@ def test_builder(stims):
 
 #PRACTICE RULE 1
 print("Practice rule 1:\n")
-lst_print(practice_builder("Stim1", "Stim2"))
+#lst_print(practice_builder("Stim1", "Stim2"))
 
 #PRACTICE RULE 2
 print("Practice rule 2:\n")
-lst_print(practice_builder("Stim3", "Stim4"))
+#lst_print(practice_builder("Stim3", "Stim4"))
 
 #LEARNING PHASE
 print("Learning phase:\n")
-lst_print(learning_with_heuristic(80))
+#lst_print(learning_with_heuristic(80))
 
 #TEST 0
 print("Test 0:\n")
-lst_print(test_builder([["Stim5", 1], ["Stim6", 0], ["Stim7", 1], ["Stim8", 0], ["Stim9", 0]]))
+#lst_print(test_builder([["Stim5", 1], ["Stim6", 0], ["Stim7", 1], ["Stim8", 0], ["Stim9", 0]]))
 
 #OVERLEARNING 1
 print("Overlearning 1:\n")
-lst_print(learning_with_heuristic(120))
+#lst_print(learning_with_heuristic(120))
 
 #TEST 1
 print("Test 1:\n")
-lst_print(test_builder([["Stim10", 0], ["Stim11", 1], ["Stim12", 0], ["Stim13", 0], ["Stim14", 1]]))
+#lst_print(test_builder([["Stim10", 0], ["Stim11", 1], ["Stim12", 0], ["Stim13", 0], ["Stim14", 1]]))
 
 #OVERLEARNING 2
 print("Overlearning 2:\n")
-lst_print(learning_with_heuristic(120))
+#lst_print(learning_with_heuristic(120))
 
 #TEST 2
 print("Test 2:\n")
-lst_print(test_builder([["Stim15", 0], ["Stim16", 1], ["Stim17", 0], ["Stim18", 0], ["Stim19", 1]]))
+#lst_print(test_builder([["Stim15", 0], ["Stim16", 1], ["Stim17", 0], ["Stim18", 0], ["Stim19", 1]]))
 
 #PreTest0
 print("PreTest0:\n")
-lst_print(scrambler(30, [["Stim5", 1],["Stim7", 1]]))
+#lst_print(scrambler(30, [["Stim5", 1],["Stim7", 1]]))
 
 #PreTest1
 print("PreTest1:\n")
-lst_print(scrambler(30, [["Stim10", 0],["Stim12", 0]]))
+lst_print(scrambler(30, [["Stim11", 1],["Stim14", 1]]))
 
 #PreTest2
 print("PreTest2:\n")
-lst_print(scrambler(30, [["Stim15", 0],["Stim17", 0]]))
+lst_print(scrambler(30, [["Stim16", 1],["Stim19", 1]]))
