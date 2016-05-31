@@ -1,0 +1,4 @@
+images = 'T1C2S2.png  T2C1S2.png  T2C5S2.png  T3C4S2.png  T4C3S2.png T1C3S1.png  T2C2S1.png  T3C1S1.png  T3C5S1.png  T4C4S1.png T1C3S2.png  T2C2S2.png  T3C1S2.png  T3C5S2.png  T4C4S2.png T1C4S1.png  T2C3S1.png  T3C2S1.png  T4C1S1.png  T4C5S1.png fixation.png  T1C4S2.png  T2C3S2.png  T3C2S2.png  T4C1S2.png  T4C5S2.png T1C1S1.png    T1C5S1.png  T2C4S1.png  T3C3S1.png  T4C2S1.png  university.png T1C1S2.png    T1C5S2.png  T2C4S2.png  T3C3S2.png  T4C2S2.png T1C2S1.png    T2C1S1.png  T2C5S1.png  T3C4S1.png  T4C3S1.png'
+imagelist = images.split()
+for image in imagelist:
+	print('\'static/images/' + image + '\'')

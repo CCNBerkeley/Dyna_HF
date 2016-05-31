@@ -12797,3 +12797,2348 @@ TemplateSyntaxError: unexpected char u'@' at 1657
 2016-05-05 09:54:19,022 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
 2016-05-05 09:54:19,029 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
 2016-05-05 09:54:19,100 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-13 06:41:33,188 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-13 06:41:33,189 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-13 06:41:33,189 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-13 06:41:33,239 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-13 06:41:33,353 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-13 06:41:33,416 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-13 06:41:33,456 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-13 06:41:33,476 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-13 06:41:33,568 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+[2016-05-29 19:59:21 +0000] [5895] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in[2016-05-29 19:59:21 +0000] [5894] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+ __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+[2016-05-29 19:59:21 +0000] [5899] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in[2016-05-29 19:59:21 +0000] [5901] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+ __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+[2016-05-29 19:59:21 +0000] [5896] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+[2016-05-29 19:59:21 +0000] [5898] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+[2016-05-29 19:59:21 +0000] [5900] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+[2016-05-29 19:59:21 +0000] [5897] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in[2016-05-29 19:59:21 +0000] [5893] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+ __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1130, "Host '218-164-174-204.dynamic.hinet.net' is not allowed to connect to this MySQL server")
+[2016-05-29 20:02:05 +0000] [6106] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+[2016-05-29 20:02:05 +0000] [6107] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+[2016-05-29 20:02:06 +0000] [6112] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+[2016-05-29 20:02:06 +0000] [6108] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+[2016-05-29 20:02:06 +0000] [6109] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+[2016-05-29 20:02:06 +0000] [6113] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+[2016-05-29 20:02:06 +0000] [6111] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+[2016-05-29 20:02:06 +0000] [6114] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+[2016-05-29 20:02:06 +0000] [6110] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 515, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 122, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 130, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 357, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/experiment.py", line 85, in <module>
+    init_db()
+  File "/usr/local/lib/python2.7/dist-packages/psiturk/db.py", line 23, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/sql/schema.py", line 3695, in create_all
+    tables=tables)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1855, in _run_visitor
+    with self._optional_conn_ctx_manager(connection) as conn:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in _optional_conn_ctx_manager
+    with self.contextual_connect() as conn:
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 200, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'ching'@'localhost' (using password: YES)")
+2016-05-29 20:03:23,277 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 20:03:23,371 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 20:03:23,498 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 20:03:23,847 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 20:03:23,855 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 20:03:23,893 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 20:03:23,934 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 20:03:23,934 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 20:03:23,990 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+[2016-05-29 21:36:19 +0000] [6244] [CRITICAL] WORKER TIMEOUT (pid:6249)
+[2016-05-29 21:36:19 +0000] [6244] [CRITICAL] WORKER TIMEOUT (pid:6250)
+[2016-05-29 21:36:19 +0000] [6244] [CRITICAL] WORKER TIMEOUT (pid:6251)
+[2016-05-29 21:36:19 +0000] [6244] [CRITICAL] WORKER TIMEOUT (pid:6252)
+[2016-05-29 21:36:19 +0000] [6244] [CRITICAL] WORKER TIMEOUT (pid:6253)
+[2016-05-29 21:36:19 +0000] [6244] [CRITICAL] WORKER TIMEOUT (pid:6254)
+[2016-05-29 21:36:19 +0000] [6244] [CRITICAL] WORKER TIMEOUT (pid:6255)
+[2016-05-29 21:36:19 +0000] [6244] [CRITICAL] WORKER TIMEOUT (pid:6256)
+[2016-05-29 21:36:19 +0000] [6244] [CRITICAL] WORKER TIMEOUT (pid:6257)
+2016-05-29 21:36:23,430 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 21:36:23,472 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 21:36:23,474 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 21:36:23,479 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 21:36:23,483 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 21:36:23,501 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 21:36:23,508 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 21:36:23,518 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-29 21:36:23,595 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 00:11:24,508 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 00:11:24,519 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 00:11:24,535 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 00:11:24,535 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 00:11:24,552 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 00:11:24,556 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 00:11:24,565 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 00:11:24,566 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 00:11:24,571 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:42,842 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:42,862 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:43,207 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,110 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,526 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,558 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,611 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,656 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,718 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,784 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,828 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,846 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,918 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:44,963 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:45,018 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:45,065 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:45,092 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 01:25:45,135 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 20:50:32,359 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 20:50:32,359 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 20:50:32,360 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 20:50:32,382 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 20:50:32,400 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 20:50:32,406 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 20:50:32,427 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 20:50:32,548 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 20:50:32,594 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:04,962 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:05,394 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:05,579 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:05,714 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,178 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,234 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,266 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,270 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,280 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,280 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,282 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,334 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,351 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:17:06,376 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:58:39,798 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:58:39,799 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:58:39,834 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:58:40,010 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:58:40,128 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:58:40,141 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:58:40,246 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:58:40,252 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js
+2016-05-30 21:58:40,275 /usr/local/lib/python2.7/dist-packages/psiturk/psiturk_js/psiturk.js

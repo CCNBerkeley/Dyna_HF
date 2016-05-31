@@ -25,7 +25,7 @@ function Stimulus(stimName, texture, color, shape, key_response, generalize) {
 	this.key_response = key_response;
 
     //If this stimulus is one of the "to learn" stimuli, is it the first or second learning rule?
-    this.generalize = generalize
+    this.generalize = generalize;
 }
 
 var texture_array = ["1", "2", "3", "4"];
@@ -51,15 +51,15 @@ var Stim6 = new Stimulus("Stim6", texture_array[0], color_array[2], shape_array[
 var Stim7 = new Stimulus("Stim7", texture_array[1], color_array[1], shape_array[1], A4, 2);
 var Stim8 = new Stimulus("Stim8", texture_array[1], color_array[1], shape_array[0], A3, 0);
 var Stim9 = new Stimulus("Stim9", texture_array[1], color_array[0], shape_array[1], A2, 0);
-var Stim10 = new Stimulus("Stim10", texture_array[0], color_array[3], shape_array[0], A1, 1);
-var Stim11 = new Stimulus("Stim11", texture_array[0], color_array[3], shape_array[1], A2, 0);
-var Stim12 = new Stimulus("Stim12", texture_array[2], color_array[0], shape_array[0], A4, 2);
+var Stim10 = new Stimulus("Stim10", texture_array[0], color_array[3], shape_array[0], A1, 0);
+var Stim11 = new Stimulus("Stim11", texture_array[0], color_array[3], shape_array[1], A2, 1);
+var Stim12 = new Stimulus("Stim12", texture_array[2], color_array[0], shape_array[0], A4, 0);
 var Stim13 = new Stimulus("Stim13", texture_array[2], color_array[0], shape_array[1], A2, 0);
-var Stim14 = new Stimulus("Stim14", texture_array[2], color_array[1], shape_array[0], A3, 0);
-var Stim15 = new Stimulus("Stim15", texture_array[0], color_array[4], shape_array[0], A3, 1);
-var Stim16 = new Stimulus("Stim16", texture_array[0], color_array[4], shape_array[1], A4, 0);
-var Stim17 = new Stimulus("Stim17", texture_array[3], color_array[1], shape_array[0], A3, 2);
+var Stim14 = new Stimulus("Stim14", texture_array[2], color_array[1], shape_array[0], A3, 2);
+var Stim15 = new Stimulus("Stim15", texture_array[0], color_array[4], shape_array[0], A3, 0);
+var Stim16 = new Stimulus("Stim16", texture_array[0], color_array[4], shape_array[1], A4, 1);
+var Stim17 = new Stimulus("Stim17", texture_array[3], color_array[1], shape_array[0], A3, 0);
 var Stim18 = new Stimulus("Stim18", texture_array[3], color_array[0], shape_array[1], A2, 0);
-var Stim19 = new Stimulus("Stim19", texture_array[3], color_array[0], shape_array[0], A1, 0);
+var Stim19 = new Stimulus("Stim19", texture_array[3], color_array[0], shape_array[0], A1, 2);
 
 
